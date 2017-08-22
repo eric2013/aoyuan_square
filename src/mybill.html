@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>消费清单</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name='apple-touch-fullscreen' content='yes'>
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+	<!-- HTTP 1.1 -->  
+    <meta http-equiv="pragma" content="no-cache">  
+    <!-- HTTP 1.0 -->  
+    <meta http-equiv="cache-control" content="no-cache">  
+    <!-- Prevent caching at the proxy server -->  
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="js/common/flexible.js"></script>  
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="grey">
+
+<div class="wrap">
+	
+	<!-- 卡券详情 -->
+	<div class="shophead">
+		<div class="shop-logo"><img src="../images/pri/shop-logo-gc.png" alt="店铺logo"></div>
+		<h3 class="shop-name">贡茶</h3>
+	</div>
+
+	<!-- 清单 -->
+	<div class="bill-box expand bg-white">
+		<div class="bill-head">
+			<h5>实付金额</h5>
+			<div class="bill-money">
+				<span class="currency">￥</span>
+				<span class="num">237.00</span>
+				<i class="ao-icon ao-icon-p-d"></i>
+			</div>
+		</div>
+
+		<div class="bill-body">
+			<ul>
+				<li class="head">
+					<div class="col-l">名称</div>
+					<div class="col-m">数量</div>
+					<div class="col-r">单价</div>
+				</li>
+				<li>
+					<div class="col-l">奶盖绿茶</div>
+					<div class="col-m">2</div>
+					<div class="col-r">￥228.00</div>
+				</li>
+				<li>
+					<div class="col-l">蜂蜜芦荟绿茶蜂蜜芦荟绿茶茶茶茶</div>
+					<div class="col-m">1</div>
+					<div class="col-r">￥20.00</div>
+				</li>
+				<li>
+					<div class="col-l">蜂蜜芦荟绿</div>
+					<div class="col-m">1</div>
+					<div class="col-r">￥9.00</div>
+				</li>
+			</ul>
+			<div class="total">合计数量：<span class="num">4</span></div>
+		</div>
+	</div>
+
+	<!-- 优惠券领取 -->
+	<div class="get-coupon-box">
+		<div class="get-coupon">
+			<div class="part-l">
+				本次消费可获得
+				<p><span>20</span> 积分</p>
+			</div>
+			<div class="part-r">
+				<a href="javascript:void(0);" class="btn btn-def">点击领取</a>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+<div class="videobox" id="videobox">
+	inner
+    <div class="poster"></div>
+    <video id='video' name="media"><source src="https://tianmavideo.meishe-app.com/video/2017/05/19/task-1-00D19FCC-9120-E51A-9DB3-7CB973B6C452.mp4" type="video/mp4"></video>
+</div>
+
+<style>
+.videobox{
+	width:100%;
+	height:9rem;
+	position:relative;
+}
+.videobox .poster{
+	width:100%;
+	height:9rem;
+	background:url(https://img04.aomygod.com/fontend/2017519/imgs/zongzibgh5.jpg) no-repeat center center;
+}
+.videobox video{
+	width:100%;
+	height:9rem;
+	position: absolute;
+	opacity: 0;
+	top:0;
+	left:0;
+	z-index: 2;
+}
+.videobox.show video{
+	opacity: 1;
+}
+</style>
+
+<style>
+.videobox{
+	width:100%;
+	height:557px;
+	position:relative;
+}
+.videobox .poster{
+	width:100%;
+	height:557px;
+	background:url(https://img04.aomygod.com/fontend/2017519/imgs/zongzibg.jpg) no-repeat center center;
+}
+.videobox video{
+	width:990px;
+	height:557px;
+	position: absolute;
+	opacity: 0;
+	top:0;
+	left:50%;
+	margin-left:-495px;
+	z-index: 2;
+	cursor:pointer;
+}
+.videobox.show video{
+	opacity: 1;
+}
+</style>
+
+
+<script>
+require(['jquery'],function(){
+	$('body').on('click','.videobox video',function(){
+		$('.videobox').addClass('show');
+		document.getElementById("video").play();
+	});
+
+	// 监听结束
+	var vid = document.getElementById("video");
+	vid.onended = function() {
+		console.log('video over');
+	    $('.videobox').removeClass('show');
+	};
+})	
+</script>
+
+<script src="js/common/require.js" crossorigin="*"></script>
+<script src="js/app.js" crossorigin="*"></script>
+<script>require(['mybill']);</script>
+
+</body>
+</html>

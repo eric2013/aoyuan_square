@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>积分明细</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name='apple-touch-fullscreen' content='yes'>
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+	<!-- HTTP 1.1 -->  
+    <meta http-equiv="pragma" content="no-cache">  
+    <!-- HTTP 1.0 -->  
+    <meta http-equiv="cache-control" content="no-cache">  
+    <!-- Prevent caching at the proxy server -->  
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="js/common/flexible.js"></script>  
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="grey">
+
+<div class="wrap">
+	<div class="point-period">
+		<div class="jSelector">
+			<input type="text" id="datePicker" value="2017-05" readonly>
+			<span id="jDate">2017年5月</span>
+			<i class="ao-icon ao-icon-p-d"></i>
+		</div>
+	</div>
+
+	<div class="bg-white point-tabs">
+		<ul class="tabs tabs2 tabs-box">
+			<li class="on">
+				<div class="bdr">
+					<span class="point" id="pIn">50</span><span>积分获取</span>
+				</div>
+			</li>
+			<li>
+				<div>
+					<span class="point" id="pOut">200</span>
+					<span>积分支出</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 积分明细 -->
+	<div class="point-box bg-white mt20">
+		<div class="info-col">
+			<!-- 积分获取 -->
+			<ul class="my-points no-last show" id="poinsIn">
+				<li>
+					<a href="Javascript:void(0);">
+						<span class="txt-def">+50</span>
+						<p class="point-name">每日签到</p>
+						<p class="point-date">2017-04-10</p>
+					</a>
+				</li>
+				<li>
+					<a href="Javascript:void(0);">
+						<span class="txt-def">+50</span>
+						<p class="point-name">每日签到</p>
+						<p class="point-date">2017-04-09</p>
+					</a>
+				</li>
+				<li>
+					<a href="Javascript:void(0);">
+						<span class="txt-def">+50</span>
+						<p class="point-name">每日签到</p>
+						<p class="point-date">2017-04-10</p>
+					</a>
+				</li>
+				<li>
+					<a href="Javascript:void(0);">
+						<span class="txt-def">+50</span>
+						<p class="point-name">每日签到</p>
+						<p class="point-date">2017-04-09</p>
+					</a>
+				</li>
+				<li>
+					<a href="Javascript:void(0);">
+						<span class="txt-def">+50</span>
+						<p class="point-name">每日签到</p>
+						<p class="point-date">2017-04-10</p>
+					</a>
+				</li>
+			</ul>
+
+			<!-- 积分支出 -->
+			<ul class="my-points no-last" id="poinsOut">
+				<li>
+					<a href="javascript:void(0);">
+						<span class="txt-green">-200</span>
+						<p class="point-name">迪斯尼卡通玩偶兑换券</p>
+						<p class="point-date">2017-04-10</p>
+					</a>
+				</li>
+				<li>
+					<a href="Javascript:void(0);">
+						<span class="txt-green">-50</span>
+						<p class="point-name">外婆家20元兑换券</p>
+						<p class="point-date">2017-04-10</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<script src="js/common/require.js" crossorigin="*"></script>
+<script src="js/app.js" crossorigin="*"></script>
+<script>require(['mypointDetail']);</script>
+<script id="pointListTpl" type="text/html">
+<%
+	var _list = data.list;
+	for(var i=0;i<_list.length;i++){
+%>
+	<li>
+		<a href="Javascript:void(0);">
+			<span class="txt-def"><%=_list.tradePoint%></span>
+			<p class="point-name"><%=_list.tradeName%></p>
+			<p class="point-date"><%=_list.tradeTime%></p>
+		</a>
+	</li>
+
+<% } %>
+</script>
+</body>
+</html>

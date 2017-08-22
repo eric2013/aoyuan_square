@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的卡券</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name='apple-touch-fullscreen' content='yes'>
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+	<!-- HTTP 1.1 -->  
+    <meta http-equiv="pragma" content="no-cache">  
+    <!-- HTTP 1.0 -->  
+    <meta http-equiv="cache-control" content="no-cache">  
+    <!-- Prevent caching at the proxy server -->  
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="js/common/flexible.js"></script>  
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="grey">
+
+<div class="wrap">
+	<div class="bg-white">
+		<ul class="tabs tabs3 tabs-txt">
+			<li class="on">
+				<div><span>未使用</span></div>
+			</li>
+			<li>
+				<div><span>已使用</span></div>
+			</li>
+			<li>
+				<div><span>已过期</span></div>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 我的卡券 -->
+	<div class="coupons-box">
+		<!-- 未使用 -->
+		<ul class="my-coupons show" id="couponList1">
+			<li>
+				<a class="coupons-obj" href="./mycoupons-detail.html">
+					<p class="coupon-name">迪斯尼卡通玩偶兑换券</p>
+					<p class="coupon-expire">兑奖截止日期：2017年05月31日</p>
+				</a>
+			</li>
+
+			<li>
+				<a class="coupons-ticket" href="./mycoupons-detail.html">
+					<p class="coupon-name">商场活动券</p>
+					<p class="coupon-expire">兑奖截止日期：2017年05月31日</p>
+				</a>
+			</li>
+		</ul>
+
+		<!-- 已使用 -->
+		<ul class="my-coupons" id="couponList2">
+			<li>
+				<a class="coupons-used" href="./mycoupons-detail.html">
+					<p class="coupon-name">迪斯尼卡通玩偶兑换券</p>
+					<p class="coupon-expire">兑奖截止日期：2017年05月31日</p>
+				</a>
+			</li>
+
+			<li>
+				<a class="coupons-used" href="./mycoupons-detail.html">
+					<p class="coupon-name">商场活动券</p>
+					<p class="coupon-expire">兑奖截止日期：2017年05月31日</p>
+				</a>
+			</li>
+		</ul>
+
+		<!-- 已过期 -->
+		<ul class="my-coupons" id="couponList3">
+			<li>
+				<a class="coupons-over" href="./mycoupons-detail.html">
+					<p class="coupon-name">迪斯尼卡通玩偶兑换券</p>
+					<p class="coupon-expire">兑奖截止日期：2017年05月31日</p>
+				</a>
+			</li>
+
+			<li>
+				<a class="coupons-over" href="./mycoupons-detail.html">
+					<p class="coupon-name">商场活动券</p>
+					<p class="coupon-expire">兑奖截止日期：2017年05月31日</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+</div>
+
+<script src="js/common/require.js" crossorigin="*"></script>
+<script src="js/app.js" crossorigin="*"></script>
+<script>require(['mycoupons']);</script>
+<script type="text/html" id="couponListTpl">
+<%
+	var _couponList = couponList;
+
+	for(var i=0; i<_couponList.length; i++){ 
+		var _name = _couponList[i].name, 
+			_expire = _couponList[i].endDate,
+			_url = './mycoupons-detail.html?couponId=' + _couponList[i].couponId,
+			_class,
+			_reg = _couponList[i].couponType + '' + _couponList[i].state;
+
+		if(_reg === '11'){
+			_class = 'coupons-obj'
+		}else if(_reg === '12' || _reg === '22'){
+			_class = 'coupons-used'
+		}else if(_reg === '13' || _reg === '23'){
+			_class = 'coupons-over'
+		}else if(_reg === '21'){
+			_class = 'coupons-ticket'
+		}
+%>	
+	<li>
+		<a class="<%=_class%>" href="<%= _url %>">
+			<p class="coupon-name"><%= _name %></p>
+			<p class="coupon-expire"><%= _expire %></p>
+		</a>
+	</li>
+
+<% } %>
+</script>
+</body>
+</html>

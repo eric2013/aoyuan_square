@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>卡券详情</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name='apple-touch-fullscreen' content='yes'>
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+	<!-- HTTP 1.1 -->  
+    <meta http-equiv="pragma" content="no-cache">  
+    <!-- HTTP 1.0 -->  
+    <meta http-equiv="cache-control" content="no-cache">  
+    <!-- Prevent caching at the proxy server -->  
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="js/common/flexible.js"></script>  
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="grey">
+
+<div class="wrap">
+	
+	<!-- 卡券详情 -->
+	<div class="coupons-box">
+		<ul class="my-coupons show">
+			<li>
+				<a class="coupons-obj" href="javascript:void(0);">
+					<p class="coupon-name">迪斯尼卡通玩偶兑换券</p>
+					<p class="coupon-expire">兑奖截止日期：2017年05月31日</p>
+				</a>
+			</li>
+		</ul>
+	</div>
+
+	<!-- 兑换码 -->
+	<div class="coupons-code mt20" id="coupons-code">兑换码 <span>SSSS00001</span></div>
+
+	<!-- 卡券说明 -->
+	<div class="coupons-rule">
+		<dl>
+			<dt>卡券说明</dt>
+			<dd class="rule-name">迪斯尼卡通玩偶</dd>
+		</dl>
+
+		<dl>
+			<dt>使用须知</dt>
+			<dd class="rule-note">凭兑换码去奥园广场服务台兑换即可</dd>
+		</dl>
+
+		<dl>
+			<dt>有效期</dt>
+			<dd class="rule-expire">2017-04-20至2017-05-30</dd>
+		</dl>
+	</div>
+
+</div>
+
+
+<script src="js/common/require.js" crossorigin="*"></script>
+<script src="js/app.js" crossorigin="*"></script>
+<script>require(['mycouponsDetail']);</script>
+
+</body>
+</html>

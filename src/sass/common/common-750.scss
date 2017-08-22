@@ -1,0 +1,138 @@
+/*
+  Global common style definitions.
+  desc : for wx aoyuanProject
+  author: By HP 2017-05-03
+  mail: 542262705@qq.com
+  reference: allex
+*/
+
+
+$fontSize: 46.875; /* 750px 宽度 */
+
+/*color定义*/
+$clr-def: #f27052; /*默认主题色 橙色*/
+$clr-def-act: #ef5734;
+$clr-green: #30b370; /*定义绿色*/
+$clr-green-act: #1bb265;
+$clr-disable: #eaeaea; /*disable时背景色*/
+$clr-border: #e4e4e4; /*默认border颜色*/
+$clr-black: #333; /*黑色字体*/
+$clr-grey: #b2b2b2; /*默认字体灰色*/
+
+
+/* 计算宽度 */
+@function rem($n) {
+    @return ($n / $fontSize) * 1rem;
+}
+
+/*居中*/
+@mixin center-block {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*前缀*/ 
+@mixin prefix($property,$value){
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
+
+
+html,body{width:100%;min-height:100%;}
+html{height:100%;color:#000;background:#FFF;-webkit-tap-highlight-color:rgba(0,0,0,0);tap-highlight-color:rgba(0,0,0,0);-webkit-font-smoothing: antialiased;}
+input,textarea,select,a,button{outline:0;}
+ul{margin:0;padding:0;}
+li{list-style-type:none;}
+p,ul,li,h2,h3,input,dl,dt,dd{margin:0;padding:0;}
+a{text-decoration:none; color:$clr-black;}
+.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+.clearfix{zoom:1;}
+
+.fl{
+    float: left;
+}
+
+.fr{
+    float: right;
+}
+
+.txt-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.txt-def{
+    color:$clr-def;
+}
+.txt-green{
+    color:$clr-green;
+}
+.txt-grey{
+    color:$clr-grey;
+}
+.txt-small{
+    font-size: rem(24);
+}
+
+.bg-grey{
+    background:f8f8f8;
+}
+.bg-white{
+    background:#fff;
+}
+.bg-no{
+    background:transparent;
+}
+
+.mt20{
+    margin-top: rem(20);
+}
+.mb20{
+    margin-bottom: rem(20);
+}
+.mr20{
+    margin-right: rem(20);
+}
+.ml20{
+    margin-left: rem(20);
+}
+.pt20{
+    padding-top: rem(20);
+}
+.pb20{
+    padding-bottom: rem(20);
+}
+.pr20{
+    padding-right: rem(20);
+}
+.pl20{
+    padding-left: rem(20);
+}
+
+.p-r{
+    position:relative;
+}
+.p-a{
+    position:absolute;
+}
+.p-f{
+    position:fixed;
+}
+.p-s{
+    position:static;
+}
+
+.hide{
+    display:none;
+}
+
+/* tap-hightlight-color */
+@mixin tap-highlight {
+    &:active{
+        background-color: #f5f5f5;
+        text-decoration: none;
+    }
+}

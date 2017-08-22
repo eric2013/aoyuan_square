@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>我的积分</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name='apple-touch-fullscreen' content='yes'>
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+	<!-- HTTP 1.1 -->  
+    <meta http-equiv="pragma" content="no-cache">  
+    <!-- HTTP 1.0 -->  
+    <meta http-equiv="cache-control" content="no-cache">  
+    <!-- Prevent caching at the proxy server -->  
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="js/common/flexible.js"></script>  
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="grey">
+
+<div class="wrap">
+	<div class="my-point">
+		<p class="point" id="point">1888</p>
+		<span class="txt-small">当前积分</span>
+		<p class="question"><i class="ao-icon ao-icon-question"></i></p>
+	</div>
+	<!-- 我的积分 -->
+	<div class="bg-white">
+		<div class="info-col">
+			<ul>
+				<li>
+					<a href="./mypoint-detail.html">
+						<label class="short"><i class="ao-icon ao-icon-pager"></i></label>
+						<div class="cont short">
+							积分明细<span class="rInfo"></span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<label class="short"><i class="ao-icon ao-icon-car"></i></label>
+						<div class="cont short">
+							积分商城<span class="rInfo"></span>
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+
+<script src="js/common/require.js" crossorigin="*"></script>
+<script src="js/app.js" crossorigin="*"></script>
+<script>require(['mypoint']);</script>
+
+</body>
+</html>

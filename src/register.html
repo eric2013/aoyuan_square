@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>注册</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name='apple-touch-fullscreen' content='yes'>
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+	<!-- HTTP 1.1 -->  
+    <meta http-equiv="pragma" content="no-cache">  
+    <!-- HTTP 1.0 -->  
+    <meta http-equiv="cache-control" content="no-cache">  
+    <!-- Prevent caching at the proxy server -->  
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="js/common/flexible.js"></script>  
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="grey">
+
+<div class="wrap pt20">
+	<!-- 注册 -->
+	<form id="register" class="login-form show bg-white" name="register">
+		<div class="info-col">
+			<ul>
+				<li>
+					<label>手机号</label>
+					<div class="cont">
+						<input type="text" class="jClear" name="mobile" value="13620402640" placeholder="输入手机号码">
+					</div>
+				</li>
+
+				<li class="p-r yzm">
+					<label>验证码</label>
+					<div class="cont">
+						<input type="text" class="jClear" name="smsCode"  value="1234" placeholder="输入验证码">
+					</div>
+					<div class="abs"><a class="btn btn-def btn-captcha" id="getCode">获取验证码</a></div>
+				</li>
+
+				<li class="p-r pwd">
+					<label>密码</label>
+					<div class="cont">
+						<input type="password" class="jClear" name="password" value="123456" placeholder="输入密码">
+					</div>
+					<div class="abs"><i class="ao-icon ao-icon-eye-off" id="eye"></i></div>
+				</li>
+
+				<li>
+					<label>姓名</label>
+					<div class="cont">
+						<input type="text" class="jClear" name="username" value="黄鹏" placeholder="请输入姓名">
+					</div>
+				</li>
+			</ul>
+		</div>
+	</form>
+
+	<div class="login-btn"><a class="btn btn-def disable" id="submit" data-form="register">注册</a></div>
+	
+	<div class="login-sub">
+		<a href="./login.html"><span class="txt-def">登录</span></a>
+	</div>
+
+</div>
+
+<!-- 注册成功 -->
+<div class="login-fullbox hide">
+	<div class="mm-ok">
+		<div class="inner">
+			<p class="txt-def">注册成功!</p>
+			<p class="txt-grey">3s后跳转至我的会员卡</p>
+		</div>
+	</div>
+</div>
+
+<script src="js/common/require.js" crossorigin="*"></script>
+<script src="js/app.js" crossorigin="*"></script>
+<script>require(['register']);</script>
+
+</body>
+</html>

@@ -1,0 +1,1714 @@
+@charset "UTF-8";
+/*
+  desc : 微信奥园项目特殊非公共css
+  author : HP 2017-05-03
+  version : 1.0.0
+ */
+/*
+  desc : 微信奥园项目公共布局css
+  author : HP 2017-05-03
+  version : 1.0.0
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill,
+input[type="text"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  -webkit-box-shadow: 0 0 0 10000px white inset;
+  outline: none; }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td,
+th {
+  padding: 0; }
+
+/*
+  Global common style definitions.
+  desc : for wx aoyuanProject
+  author: By HP 2017-05-03
+  mail: 542262705@qq.com
+  reference: allex
+*/
+/* 750px 宽度 */
+/*color定义*/
+/*默认主题色 橙色*/
+/*定义绿色*/
+/*disable时背景色*/
+/*默认border颜色*/
+/*黑色字体*/
+/*默认字体灰色*/
+/* 计算宽度 */
+/*居中*/
+/*前缀*/
+html, body {
+  width: 100%;
+  min-height: 100%; }
+
+html {
+  height: 100%;
+  color: #000;
+  background: #FFF;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased; }
+
+input, textarea, select, a, button {
+  outline: 0; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+p, ul, li, h2, h3, input, dl, dt, dd {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.txt-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.txt-def {
+  color: #f27052; }
+
+.txt-green {
+  color: #30b370; }
+
+.txt-grey {
+  color: #b2b2b2; }
+
+.txt-small {
+  font-size: 0.512rem; }
+
+.bg-grey {
+  background: f8f8f8; }
+
+.bg-white {
+  background: #fff; }
+
+.bg-no {
+  background: transparent; }
+
+.mt20 {
+  margin-top: 0.42667rem; }
+
+.mb20 {
+  margin-bottom: 0.42667rem; }
+
+.mr20 {
+  margin-right: 0.42667rem; }
+
+.ml20 {
+  margin-left: 0.42667rem; }
+
+.pt20 {
+  padding-top: 0.42667rem; }
+
+.pb20 {
+  padding-bottom: 0.42667rem; }
+
+.pr20 {
+  padding-right: 0.42667rem; }
+
+.pl20 {
+  padding-left: 0.42667rem; }
+
+.p-r {
+  position: relative; }
+
+.p-a {
+  position: absolute; }
+
+.p-f {
+  position: fixed; }
+
+.p-s {
+  position: static; }
+
+.hide {
+  display: none; }
+
+/* tap-hightlight-color */
+/* 750px 宽度 */
+/*color定义*/
+/*默认主题色 橙色*/
+/*定义绿色*/
+/*提醒红色*/
+/*disable时背景色*/
+/*默认border颜色*/
+/*黑色字体*/
+/*默认字体灰色*/
+/* 计算宽度*/
+/*居中*/
+/*前缀*/
+body {
+  background: #fff; }
+  body.grey {
+    background: #f5f5f5; }
+
+.wrap-gap {
+  padding-left: 0.42667rem;
+  padding-right: 0.42667rem; }
+
+.wrap, .wrap-gap {
+  font-size: 0.64rem; }
+
+/*css3 loading*/
+.ao-loading {
+  width: 4.26667rem;
+  height: 4.26667rem;
+  vertical-align: middle;
+  margin-left: -2.13333rem;
+  margin-top: -2.13333rem;
+  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 0.256rem;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 1000;
+  /*Typing Loader*/
+  /*Typing Loader End*/ }
+  .ao-loading .typing_loader {
+    width: 0.256rem;
+    height: 0.256rem;
+    border-radius: 50%;
+    -webkit-animation: typing 1s linear infinite alternate;
+    -moz-animation: Typing 1s linear infinite alternate;
+    -ms-animation: Typing 1s linear infinite alternate;
+    animation: typing 1s linear infinite alternate;
+    margin: 1.96267rem auto;
+    /* Not necessary- its only for layouting*/
+    position: relative;
+    left: -0.512rem; }
+@-webkit-keyframes typing {
+  0% {
+    background-color: white;
+    box-shadow: 0.512rem 0 0 0 rgba(255, 255, 255, 0.2), 1.024rem 0 0 0 rgba(255, 255, 255, 0.2); }
+  25% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0.512rem 0 0 0 white, 1.024rem 0 0 0 rgba(255, 255, 255, 0.2); }
+  75% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0.512rem 0 0 0 rgba(255, 255, 255, 0.2), 1.024rem 0 0 0 white; } }
+@-moz-keyframes typing {
+  0% {
+    background-color: white;
+    box-shadow: 0.512rem 0 0 0 rgba(255, 255, 255, 0.2), 1.024rem 0 0 0 rgba(255, 255, 255, 0.2); }
+  25% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0.512rem 0 0 0 white, 1.024rem 0 0 0 rgba(255, 255, 255, 0.2); }
+  75% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0.512rem 0 0 0 rgba(255, 255, 255, 0.2), 1.024rem 0 0 0 white; } }
+@keyframes typing {
+  0% {
+    background-color: white;
+    box-shadow: 0.512rem 0 0 0 rgba(255, 255, 255, 0.2), 1.024rem 0 0 0 rgba(255, 255, 255, 0.2); }
+  25% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0.512rem 0 0 0 white, 1.024rem 0 0 0 rgba(255, 255, 255, 0.2); }
+  75% {
+    background-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0.512rem 0 0 0 rgba(255, 255, 255, 0.2), 1.024rem 0 0 0 white; } }
+.ao-icon {
+  display: inline-block;
+  width: 0.85333rem;
+  height: 0.85333rem;
+  vertical-align: middle;
+  /*眼开*/
+  /*眼闭*/
+  /*清除*/
+  /*关闭*/
+  /*成功*/
+  /*错误*/
+  /*皇冠*/
+  /*购物车*/
+  /*证件*/
+  /*扫码*/
+  /*圆柱*/
+  /*绿书签*/
+  /*钱*/
+  /*圆P字*/
+  /*橙色向下箭头*/
+  /*灰色向右箭头*/
+  /*书页*/
+  /*问号*/
+  /*蓝色对勾*/ }
+  .ao-icon.hide {
+    display: none; }
+  .ao-icon.ao-icon-eye-on {
+    background: url(../images/ao-icon-eye-on.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-eye-off {
+    background: url(../images/ao-icon-eye-off.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-clear {
+    background: url(../images/ao-icon-clear.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-cha {
+    background: url(../images/ao-icon-cha.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-ok {
+    background: url(../images/ao-icon-ok.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-err {
+    background: url(../images/ao-icon-err.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-cap {
+    background: url(../images/ao-icon-cap.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-car {
+    background: url(../images/ao-icon-car.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-certi {
+    background: url(../images/ao-icon-certi.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-code {
+    background: url(../images/ao-icon-code.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-cylinder {
+    background: url(../images/ao-icon-cylinder.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-label-green {
+    background: url(../images/ao-icon-label-green.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-money {
+    background: url(../images/ao-icon-money.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-p {
+    background: url(../images/ao-icon-p.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-p-d {
+    background: url(../images/ao-icon-p-d.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-p-r {
+    background: url(../images/ao-icon-p-r.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-pager {
+    background: url(../images/ao-icon-pager.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-question {
+    background: url(../images/ao-icon-question.png) no-repeat center center;
+    background-size: contain; }
+  .ao-icon.ao-icon-ok-blue {
+    background: url(../images/ao-icon-ok-blue.pngg) no-repeat center center;
+    background-size: contain; }
+
+.btn {
+  display: inline-block;
+  width: 100%;
+  height: 2.09067rem;
+  line-height: 2.09067rem;
+  text-align: center;
+  border-radius: 0.128rem; }
+  .btn.btn-def {
+    background: #f27052;
+    color: #fff; }
+    .btn.btn-def:active {
+      background: #ef5734; }
+  .btn.btn-green {
+    background: #30b370;
+    color: #fff; }
+    .btn.btn-green:active {
+      background: #1bb265; }
+  .btn.disable {
+    background: #eaeaea;
+    color: #999; }
+    .btn.disable:active {
+      background: #eaeaea; }
+
+.info-col ul {
+  margin: 0 0.42667rem; }
+  .info-col ul.long-label label {
+    width: 3.328rem; }
+  .info-col ul.long-label .cont {
+    margin-left: 3.328rem; }
+  .info-col ul.no-last li:last-of-type {
+    border-bottom: 0; }
+  .info-col ul li {
+    height: 2.19733rem;
+    line-height: 2.176rem;
+    border-bottom: solid 0.02133rem #bbb; }
+    .info-col ul li > a {
+      display: block;
+      height: 100%;
+      background: url(../images/ao-icon-p-r-grey.png) no-repeat right center;
+      background-size: 0.85333rem 0.85333rem; }
+    .info-col ul li label {
+      float: left;
+      width: 2.90133rem;
+      color: #333;
+      text-indent: 0.21333rem; }
+      .info-col ul li label.short {
+        width: 1.45067rem; }
+    .info-col ul li .cont {
+      margin-left: 2.90133rem; }
+      .info-col ul li .cont.short {
+        margin-left: 1.45067rem; }
+      .info-col ul li .cont .ao-icon-clear {
+        position: absolute;
+        right: 0.42667rem;
+        top: 0.64rem; }
+      .info-col ul li .cont .rInfo {
+        float: right;
+        margin-right: 1.06667rem;
+        color: #b2b2b2; }
+    .info-col ul li .abs {
+      position: absolute; }
+
+.tabs {
+  width: 100%;
+  height: 2.09067rem;
+  text-align: center;
+  font-size: 0.68267rem; }
+  .tabs.tabs4 li {
+    width: 25%; }
+  .tabs.tabs3 li {
+    width: 33.3%; }
+  .tabs.tabs2 li {
+    width: 50%; }
+  .tabs.tabs-txt li span {
+    display: inline-block;
+    line-height: 1.19467rem;
+    padding-top: 0.384rem;
+    border-bottom: solid 0.064rem transparent; }
+  .tabs.tabs-txt li.on span {
+    border-bottom-color: #f27052; }
+  .tabs.tabs-box li {
+    line-height: 2.02667rem;
+    border-bottom: solid 0.064rem transparent; }
+  .tabs.tabs-box li.on {
+    border-bottom-color: #f27052; }
+  .tabs li {
+    float: left;
+    height: 2.09067rem;
+    box-sizing: border-box; }
+    .tabs li.on {
+      color: #f27052; }
+
+/*datePicker*/
+.gearYM, .gearDate, .gearDatetime, .gearTime {
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-size: 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9900;
+  overflow: hidden;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.date_ctrl {
+  vertical-align: middle;
+  background-color: #d5d8df;
+  color: #000;
+  margin: 0;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 9901;
+  overflow: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+.slideInUp {
+  animation: slideInUp .3s ease;
+  -webkit-animation: slideInUp .3s ease; }
+
+@-webkit-keyframes slideInUp {
+  from {
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0); }
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0); } }
+.ym_roll, .date_roll, .datetime_roll, .time_roll {
+  display: -webkit-box;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  font-weight: bold;
+  background-color: transparent;
+  -webkit-mask: -webkit-gradient(linear, 0% 50%, 0% 100%, from(#debb47), to(rgba(36, 142, 36, 0)));
+  -webkit-mask: -webkit-linear-gradient(top, #debb47 50%, rgba(36, 142, 36, 0)); }
+
+.ym_roll > div, .date_roll > div, .datetime_roll > div, .time_roll > div {
+  font-size: 3.5em;
+  height: 6em;
+  float: left;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+  -webkit-box-flex: 4; }
+
+.ym_roll > div .gear, .date_roll > div .gear, .datetime_roll > div .gear, .time_roll > div .gear {
+  width: 100%;
+  float: left;
+  position: absolute;
+  z-index: 9902;
+  margin-top: -6em; }
+
+.date_roll_mask {
+  -webkit-mask: -webkit-gradient(linear, 0% 40%, 0% 0%, from(#debb47), to(rgba(36, 142, 36, 0)));
+  -webkit-mask: -webkit-linear-gradient(bottom, #debb47 50%, rgba(36, 142, 36, 0));
+  padding: 0 0 3em 0; }
+
+.date_roll > div:nth-child(2) {
+  -webkit-box-flex: 2; }
+
+.date_roll > div:nth-child(1), .datetime_roll > div:nth-child(1) {
+  -webkit-box-flex: 4; }
+
+.datetime_roll > div:first-child {
+  -webkit-box-flex: 6; }
+
+.datetime_roll > div:last-child {
+  -webkit-box-flex: 6; }
+
+.date_grid {
+  position: relative;
+  top: 2em;
+  width: 100%;
+  height: 2em;
+  margin: 0;
+  box-sizing: border-box;
+  z-index: 0;
+  border-top: 1px solid #abaeb5;
+  border-bottom: 1px solid #abaeb5; }
+
+.date_grid > div {
+  color: #000;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: .8em;
+  line-height: 2.5em; }
+
+.date_roll > div:nth-child(3) .date_grid > div {
+  left: 42%; }
+
+.datetime_roll > div .date_grid > div {
+  right: 0; }
+
+.datetime_roll > div:first-child .date_grid > div {
+  left: auto;
+  right: 0%; }
+
+.datetime_roll > div:last-child .date_grid > div {
+  left: 50%; }
+
+.time_roll > div:nth-child(1) .date_grid > div {
+  right: 1em; }
+
+.ym_roll > div:nth-child(1) .date_grid > div {
+  right: 0.1em; }
+
+.ym_roll > div .date_grid > div, .time_roll > div .date_grid > div {
+  right: 5em; }
+
+.date_btn {
+  color: #0575f2;
+  font-size: 3.2em;
+  font-weight: 600;
+  line-height: 1em;
+  text-align: center;
+  padding: 0.8em 1em; }
+
+.date_btn_box:before, .date_btn_box:after {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: #96979b;
+  z-index: 15;
+  -webkit-transform: scaleY(0.33);
+  transform: scaleY(0.33); }
+
+.date_btn_box {
+  display: -webkit-box;
+  -webkit-box-pack: justify;
+  -webkit-box-align: stretch;
+  background-color: #f1f2f4;
+  position: relative; }
+
+.date_btn_box:before {
+  left: 0;
+  top: 0;
+  -webkit-transform-origin: 50% 20%;
+  transform-origin: 50% 20%; }
+
+.date_btn_box:after {
+  left: 0;
+  bottom: 0;
+  -webkit-transform-origin: 50% 70%;
+  transform-origin: 50% 70%; }
+
+.date_roll > div:nth-child(1) .gear {
+  text-indent: 20%; }
+
+.date_roll > div:nth-child(2) .gear {
+  text-indent: -20%; }
+
+.date_roll > div:nth-child(3) .gear {
+  text-indent: -55%; }
+
+.datetime_roll > div .gear {
+  width: 100%;
+  text-indent: -25%; }
+
+.datetime_roll > div:first-child .gear {
+  text-indent: -10%; }
+
+.datetime_roll > div:last-child .gear {
+  text-indent: -50%; }
+
+.ym_roll > div .gear, .time_roll > div .gear {
+  width: 100%;
+  text-indent: -70%; }
+
+.ym_roll > div:nth-child(1) .gear, .time_roll > div:nth-child(1) .gear {
+  width: 100%;
+  text-indent: 10%; }
+
+.tooth {
+  height: 2em;
+  line-height: 2em;
+  text-align: center; }
+
+/*遮罩层*/
+.ao-cover {
+  display: none;
+  background: rgba(0, 0, 0, 0.75);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500; }
+  .ao-cover.show {
+    display: block; }
+
+/*对话框*/
+.ao-dialog {
+  font-size: 0.64rem;
+  overflow: hidden;
+  border-radius: 0.21333rem;
+  box-sizing: border-box;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 600;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  /*&.pop{
+  	width:80%;
+  	padding:rem(50) 0;
+  	background:#fff;
+  }*/ }
+  .ao-dialog.alert {
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    padding: 0.53333rem 0.64rem;
+    line-height: 0.85333rem;
+    background: rgba(0, 0, 0, 0.8); }
+  .ao-dialog.toast {
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    padding: 0 1.06667rem;
+    line-height: 1.70667rem;
+    background: rgba(0, 0, 0, 0.75);
+    border-radius: 0.064rem;
+    top: 80%; }
+  .ao-dialog.ok {
+    width: 80%;
+    text-align: center;
+    color: #30b370;
+    padding: 0 1.06667rem;
+    line-height: 2.13333rem;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.064rem 0.064rem 0.21333rem rgba(0, 0, 0, 0.1);
+    top: 30%; }
+    .ao-dialog.ok .cnt .ao-icon {
+      margin-right: 0.10667rem; }
+  .ao-dialog.err {
+    width: 80%;
+    text-align: center;
+    color: #e4393c;
+    padding: 0 1.06667rem;
+    line-height: 2.13333rem;
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0.064rem 0.064rem 0.21333rem rgba(0, 0, 0, 0.1);
+    top: 30%; }
+    .ao-dialog.err .cnt .ao-icon {
+      margin-right: 0.10667rem; }
+  .ao-dialog.confirm {
+    width: 80%;
+    text-align: center;
+    color: #333;
+    background: white;
+    border-radius: 0.34133rem;
+    top: 40%; }
+    .ao-dialog.confirm .cnt .msg {
+      padding: 1.06667rem 0.42667rem;
+      line-height: 0.85333rem;
+      border-bottom: solid 0.02133rem #bbb; }
+    .ao-dialog.confirm .cnt .btnbox {
+      height: 2.13333rem;
+      line-height: 2.13333rem; }
+      .ao-dialog.confirm .cnt .btnbox a {
+        display: block;
+        float: left;
+        width: 50%; }
+        .ao-dialog.confirm .cnt .btnbox a div {
+          border-left: solid 0.02133rem #bbb; }
+  .ao-dialog.pop {
+    width: 80%;
+    text-align: center;
+    color: #333;
+    background: white;
+    border-radius: 0.34133rem;
+    top: 40%; }
+    .ao-dialog.pop .cnt {
+      padding: 0.85333rem;
+      position: relative; }
+      .ao-dialog.pop .cnt .close {
+        position: absolute;
+        right: 0.64rem;
+        top: 0.42667rem; }
+      .ao-dialog.pop .cnt .msg {
+        line-height: 0.85333rem; }
+      .ao-dialog.pop .cnt .btnbox {
+        height: 2.13333rem;
+        line-height: 2.13333rem; }
+        .ao-dialog.pop .cnt .btnbox a {
+          display: block;
+          width: 100%;
+          border-radius: 0.21333rem; }
+  .ao-dialog.prompt {
+    width: 80%;
+    text-align: center;
+    color: #333;
+    background: white;
+    border-radius: 0.34133rem;
+    top: 40%; }
+    .ao-dialog.prompt .cnt {
+      padding: 0.85333rem;
+      position: relative; }
+      .ao-dialog.prompt .cnt .close {
+        position: absolute;
+        right: 0.64rem;
+        top: 0.42667rem; }
+      .ao-dialog.prompt .cnt .msg {
+        line-height: 0.85333rem; }
+      .ao-dialog.prompt .cnt .btnbox {
+        height: 2.13333rem;
+        line-height: 2.13333rem; }
+        .ao-dialog.prompt .cnt .btnbox a {
+          display: block;
+          width: 100%;
+          border-radius: 0.21333rem; }
+
+/*选择器*/
+.ao-selector {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 600; }
+  .ao-selector .inner {
+    color: #0079ff;
+    font-size: 0.768rem;
+    line-height: 2.432rem;
+    text-align: center;
+    margin: 0.42667rem; }
+    .ao-selector .inner .list {
+      width: 100%;
+      margin-bottom: 0.42667rem;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 0.512rem; }
+      .ao-selector .inner .list li {
+        border-bottom: solid 0.02133rem #bbb; }
+        .ao-selector .inner .list li.select {
+          background: url(../../images/ao-icon-ok-blue.png) no-repeat 10.66667rem center;
+          background-size: 0.85333rem 0.85333rem; }
+    .ao-selector .inner .box {
+      width: 100%;
+      overflow: hidden;
+      background: #fff;
+      border-radius: 0.512rem; }
+      .ao-selector .inner .box .cancel {
+        display: block;
+        font-weight: 500; }
+
+/* 750px 宽度 */
+/*color定义*/
+/*默认主题色 橙色*/
+/*定义绿色*/
+/*提醒红色*/
+/*disable时背景色*/
+/*默认border颜色*/
+/*黑色字体*/
+/*黑色字体*/
+/*默认字体灰色*/
+/*兑换确认中产品名称的颜色*/
+/* 计算宽度 */
+/*居中*/
+/*前缀*/
+/* login 会员登录 / 注册 / 忘记密码 */
+.login-tab {
+  padding-top: 1.28rem;
+  padding-bottom: 1.6rem; }
+  .login-tab ul {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0.02133rem #f27052;
+    border-radius: 0.128rem;
+    box-sizing: border-box;
+    overflow: hidden; }
+    .login-tab ul li {
+      float: left;
+      width: 50%;
+      height: 1.664rem;
+      line-height: 1.664rem;
+      text-align: center;
+      font-size: 0.64rem; }
+      .login-tab ul li.on {
+        color: #fff;
+        background: #f27052; }
+
+.login-title {
+  font-size: 0.768rem;
+  text-align: center;
+  padding: 1.06667rem 0; }
+
+.login-form {
+  display: none; }
+  .login-form.show {
+    display: block; }
+  .login-form .cont input {
+    width: 100%;
+    height: 2.176rem;
+    border: 0; }
+  .login-form li.yzm {
+    margin-right: 5.12rem; }
+    .login-form li.yzm .abs {
+      right: -5.12rem;
+      top: 0; }
+      .login-form li.yzm .abs .btn {
+        width: 4.90667rem;
+        height: 1.83467rem;
+        line-height: 1.83467rem;
+        margin-top: 0.36267rem; }
+  .login-form li.pwd .cont .ao-icon-clear {
+    right: 2.56rem; }
+  .login-form li.pwd .abs {
+    width: 1.70667rem;
+    text-align: center;
+    right: 0.42667rem;
+    top: 0rem;
+    z-index: 10; }
+
+.login-btn {
+  margin: 2.13333rem 0.42667rem 0.53333rem;
+  font-size: 0.72533rem; }
+
+.login-sub {
+  margin: 0 0.42667rem;
+  font-size: 0.68267rem; }
+  .login-sub a.hide {
+    display: none; }
+
+.login-privilege {
+  width: 100%;
+  position: absolute;
+  bottom: 1.344rem;
+  text-align: center; }
+  .login-privilege a {
+    color: #f27052;
+    font-size: 0.59733rem;
+    line-height: 1.024rem;
+    text-decoration: underline; }
+
+.login-fullbox {
+  width: 100%;
+  height: 100%; }
+  .login-fullbox .mm-ok {
+    padding-top: 5.33333rem; }
+    .login-fullbox .mm-ok .inner {
+      text-align: center;
+      padding-top: 3.2rem;
+      background: url(../images/ao-icon-ok-big.png) no-repeat center top;
+      background-size: 2.56rem 2.56rem; }
+      .login-fullbox .mm-ok .inner .txt-def {
+        font-size: 0.768rem;
+        margin-bottom: 0.21333rem; }
+
+.ao-dialog.prompt.pic-coder .msg .title {
+  color: #f27052;
+  margin-bottom: 1.06667rem; }
+.ao-dialog.prompt.pic-coder .msg .coder {
+  width: 100%;
+  height: 3.2rem; }
+  .ao-dialog.prompt.pic-coder .msg .coder input {
+    float: left;
+    width: 5.93067rem;
+    height: 1.87733rem;
+    color: #f27052;
+    font-size: 0.68267rem;
+    text-indent: 0.64rem;
+    border-radius: 0.93867rem;
+    border: solid 0.02133rem #f27052; }
+  .ao-dialog.prompt.pic-coder .msg .coder img {
+    float: right;
+    width: 4.26667rem;
+    height: 1.87733rem; }
+.ao-dialog.prompt.pic-coder .btnbox a.btn-ok {
+  width: 50%;
+  color: #fff;
+  background: #f27052;
+  margin-left: 25%; }
+
+/*我的会员卡*/
+.my-card {
+  width: 100%;
+  height: 6.57067rem;
+  padding-top: 1.06667rem; }
+  .my-card img {
+    width: 100%; }
+
+/*我的积分*/
+.my-point {
+  text-align: center;
+  padding: 1.28rem 0 1.024rem;
+  margin-bottom: 0.42667rem;
+  background: #fff;
+  border-bottom: solid 0.02133rem #bbb;
+  position: relative; }
+  .my-point .point {
+    color: #f27052;
+    font-size: 1.536rem; }
+  .my-point .question {
+    position: absolute;
+    right: 0.64rem;
+    top: 0.42667rem; }
+
+/*积分明细*/
+.point-period {
+  width: 100%;
+  padding: 1.28rem 0; }
+  .point-period > div {
+    width: 40%;
+    text-align: center;
+    line-height: 1.536rem;
+    color: #f27052;
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 0.02133rem #bbb;
+    border-radius: 0.128rem;
+    position: relative; }
+    .point-period > div input {
+      width: 100%;
+      height: 1.536rem;
+      border: 0;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 20;
+      background: transparent; }
+    .point-period > div .ao-icon {
+      background-size: 0.68267rem 0.68267rem;
+      position: absolute;
+      right: 0.42667rem;
+      top: 0.34133rem; }
+
+.point-tabs {
+  border-bottom: solid 0.02133rem #bbb; }
+  .point-tabs .tabs.tabs-box {
+    height: 2.98667rem; }
+    .point-tabs .tabs.tabs-box li {
+      height: 2.98667rem;
+      line-height: initial;
+      padding: 0.32rem 0;
+      box-sizing: border-box; }
+      .point-tabs .tabs.tabs-box li .bdr {
+        height: 100%;
+        border-right: solid 0.02133rem #bbb; }
+      .point-tabs .tabs.tabs-box li .point {
+        display: block;
+        font-size: 1.024rem;
+        line-height: 1.28rem;
+        margin: 0; }
+      .point-tabs .tabs.tabs-box li span {
+        font-size: 0.512rem; }
+
+.point-box .my-points {
+  display: none; }
+  .point-box .my-points.show {
+    display: block; }
+  .point-box .my-points li {
+    height: 2.56rem;
+    line-height: 2.56rem; }
+    .point-box .my-points li a {
+      position: relative;
+      background: none; }
+      .point-box .my-points li a .point-name {
+        width: 70%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .point-box .my-points li a .point-date {
+        color: #b2b2b2;
+        font-size: 0.512rem;
+        line-height: 0.512rem;
+        position: absolute;
+        left: 0;
+        top: 1.70667rem; }
+      .point-box .my-points li a .txt-def, .point-box .my-points li a .txt-green {
+        float: right;
+        font-size: 0.768rem; }
+
+/*积分商城*/
+.mall-box {
+  overflow: hidden; }
+
+.mall-sort-tit {
+  line-height: 0.768rem;
+  font-size: 0.68267rem;
+  padding-left: 0.42667rem;
+  margin: 0.93867rem 0.42667rem 0.55467rem;
+  border-left: solid 0.128rem #f27052; }
+
+.mall-goods-list {
+  margin-left: 0.42667rem; }
+  .mall-goods-list ul {
+    overflow: hidden; }
+    .mall-goods-list ul li {
+      float: left;
+      width: 7.36rem;
+      height: 10.24rem;
+      margin-right: 0.42667rem;
+      margin-bottom: 0.42667rem;
+      background: #fff; }
+      .mall-goods-list ul li a {
+        display: block;
+        height: 10.24rem; }
+        .mall-goods-list ul li a img {
+          width: 7.36rem;
+          height: 7.36rem; }
+        .mall-goods-list ul li a p {
+          padding-left: 0.42667rem;
+          padding-right: 0.42667rem; }
+          .mall-goods-list ul li a p.g-info {
+            line-height: 1.28rem;
+            color: #f27052; }
+            .mall-goods-list ul li a p.g-info .point {
+              font-size: 0.85333rem; }
+            .mall-goods-list ul li a p.g-info .num {
+              float: right;
+              color: #b2b2b2; }
+          .mall-goods-list ul li a p.g-name {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap; }
+
+/*积分商城商品详情*/
+.mall-goods-intro {
+  padding: 0.64rem;
+  margin-bottom: 0.42667rem;
+  background: #fff;
+  overflow: hidden; }
+  .mall-goods-intro .goods-img {
+    float: left;
+    width: 4.26667rem;
+    height: 4.26667rem; }
+    .mall-goods-intro .goods-img img {
+      width: 4.26667rem;
+      height: 4.26667rem; }
+  .mall-goods-intro .goods-info {
+    margin-left: 4.90667rem; }
+    .mall-goods-intro .goods-info .g-name {
+      font-size: 0.768rem;
+      line-height: 1.06667rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+    .mall-goods-intro .goods-info .g-date {
+      font-size: 0.512rem;
+      color: #6c83b1; }
+    .mall-goods-intro .goods-info .g-info {
+      margin-top: 1.49333rem;
+      color: #f27052; }
+      .mall-goods-intro .goods-info .g-info .point {
+        font-size: 0.85333rem; }
+      .mall-goods-intro .goods-info .g-info .num {
+        margin-left: 0.85333rem;
+        color: #b2b2b2; }
+
+.mall-goods-rule {
+  padding: 0.64rem;
+  margin-bottom: 0.42667rem;
+  background: #fff;
+  overflow: hidden; }
+  .mall-goods-rule .title {
+    font-weight: 600;
+    margin-bottom: 0.42667rem; }
+  .mall-goods-rule li {
+    color: #666;
+    font-size: 0.59733rem;
+    margin-bottom: 0.42667rem; }
+    .mall-goods-rule li span {
+      float: left;
+      display: block;
+      width: 0.42667rem; }
+    .mall-goods-rule li p {
+      margin-left: 0.64rem; }
+
+.mall-goods-btn {
+  width: 100%;
+  font-size: 0.68267rem;
+  padding: 0.64rem;
+  box-sizing: border-box;
+  position: absolute;
+  bottom: 0; }
+
+/*我的卡券*/
+.coupons-box {
+  margin: 0 0.42667rem; }
+  .coupons-box .my-coupons {
+    display: none; }
+    .coupons-box .my-coupons.show {
+      display: block; }
+    .coupons-box .my-coupons li {
+      padding-top: 0.42667rem; }
+      .coupons-box .my-coupons li a {
+        display: block;
+        width: 100%;
+        height: 4.90667rem; }
+        .coupons-box .my-coupons li a.coupons-obj {
+          background: url(../images/aoyuan-kaquan-def.png) no-repeat;
+          background-size: 100% 100%; }
+        .coupons-box .my-coupons li a.coupons-obj-used {
+          background: url(../images/aoyuan-kaquan-def-used.png) no-repeat;
+          background-size: 100% 100%; }
+        .coupons-box .my-coupons li a.coupons-obj-over {
+          background: url(../images/aoyuan-kaquan-def-expire.png) no-repeat;
+          background-size: 100% 100%; }
+        .coupons-box .my-coupons li a.coupons-ticket {
+          background: url(../images/aoyuan-kaquan-green.png) no-repeat;
+          background-size: 100% 100%; }
+        .coupons-box .my-coupons li a.coupons-ticket-used {
+          background: url(../images/aoyuan-kaquan-green-used.png) no-repeat;
+          background-size: 100% 100%; }
+        .coupons-box .my-coupons li a.coupons-ticket-over {
+          background: url(../images/aoyuan-kaquan-green-expire.png) no-repeat;
+          background-size: 100% 100%; }
+        .coupons-box .my-coupons li a.coupons-used {
+          background: url(../images/aoyuan-kaquan-used.png) no-repeat;
+          background-size: 100% 100%; }
+        .coupons-box .my-coupons li a.coupons-over {
+          background: url(../images/aoyuan-kaquan-expire.png) no-repeat;
+          background-size: 100% 100%; }
+        .coupons-box .my-coupons li a .coupon-name {
+          line-height: 3.49867rem;
+          padding-left: 0.64rem;
+          font-size: 0.85333rem;
+          color: #fff;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden; }
+        .coupons-box .my-coupons li a .coupon-expire {
+          color: #666;
+          line-height: 1.28rem;
+          padding-left: 0.64rem; }
+
+.coupons-code {
+  width: 100%;
+  height: 2.51733rem;
+  line-height: 2.51733rem;
+  font-size: 0.768rem;
+  font-weight: 600;
+  text-align: center;
+  background: #fff; }
+
+.coupons-rule {
+  margin-top: 0.42667rem;
+  padding: 0.42667rem 0;
+  background: #fff; }
+  .coupons-rule dl {
+    padding: 0.32rem 0.42667rem; }
+    .coupons-rule dl dt {
+      padding-left: 0.42667rem; }
+      .coupons-rule dl dt:before {
+        display: inline-block;
+        width: 0.42667rem;
+        height: 100%;
+        content: "●";
+        font-size: 0.42667rem; }
+    .coupons-rule dl dd {
+      padding-left: 0.85333rem;
+      color: #b2b2b2; }
+
+/*我的清单*/
+.shophead {
+  padding: 1.06667rem 0 0.85333rem; }
+  .shophead .shop-logo {
+    width: 2.816rem;
+    height: 2.816rem;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+    overflow: hidden; }
+    .shophead .shop-logo img {
+      width: 100%;
+      height: 100%; }
+  .shophead .shop-name {
+    text-align: center;
+    font-size: 0.768rem;
+    margin-top: 0.21333rem; }
+
+.bill-box {
+  padding: 0 0.42667rem;
+  border-bottom: solid 0.02133rem #bbb; }
+  .bill-box.expand .ao-icon {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg); }
+  .bill-box .bill-head {
+    height: 2.56rem;
+    line-height: 2.56rem; }
+    .bill-box .bill-head h5 {
+      display: inline-block;
+      line-height: 2.56rem;
+      font-size: 0.64rem;
+      margin: 0; }
+    .bill-box .bill-head .bill-money {
+      float: right; }
+      .bill-box .bill-head .bill-money .num {
+        font-size: 0.81067rem; }
+      .bill-box .bill-head .bill-money .ao-icon {
+        -webkit-transition: transform 0.15s;
+        -moz-transition: transform 0.15s;
+        -ms-transition: transform 0.15s;
+        -o-transition: transform 0.15s;
+        transition: transform 0.15s; }
+  .bill-box .bill-body ul {
+    padding-bottom: 0.64rem;
+    border-top: solid 0.02133rem #bbb;
+    border-bottom: solid 0.02133rem #bbb; }
+    .bill-box .bill-body ul li {
+      overflow: hidden;
+      width: 100%;
+      line-height: 1.28rem; }
+      .bill-box .bill-body ul li.head {
+        line-height: 2.13333rem;
+        color: #b2b2b2; }
+      .bill-box .bill-body ul li > div {
+        float: left; }
+        .bill-box .bill-body ul li > div.col-l {
+          width: 7.68rem;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap; }
+        .bill-box .bill-body ul li > div.col-m {
+          width: 4.05333rem;
+          text-align: center; }
+        .bill-box .bill-body ul li > div.col-r {
+          width: 3.41333rem;
+          text-align: right; }
+  .bill-box .bill-body .total {
+    line-height: 2.09067rem; }
+
+.get-coupon-box {
+  padding: 0 0.64rem;
+  margin-top: 0.42667rem; }
+  .get-coupon-box .get-coupon {
+    width: 14.72rem;
+    height: 3.75467rem;
+    background: url(../images/aoyuan-jifen-bg.png) no-repeat; }
+    .get-coupon-box .get-coupon .part-l {
+      float: left;
+      width: 7.46667rem;
+      text-align: center;
+      padding-top: 0.85333rem;
+      color: #b2b2b2; }
+      .get-coupon-box .get-coupon .part-l p {
+        color: #f27052;
+        line-height: 1.70667rem; }
+        .get-coupon-box .get-coupon .part-l p span {
+          font-size: 1.28rem;
+          font-weight: 500; }
+    .get-coupon-box .get-coupon .part-r {
+      float: left;
+      width: 4.69333rem; }
+      .get-coupon-box .get-coupon .part-r .btn {
+        margin: 0.832rem 1.28rem 0; }
+
+/*我的资料*/
+input[disabled="true"].sex {
+  color: #333; }
+
+input[name="bz"] {
+  padding-right: 1.70667rem;
+  box-sizing: border-box; }
+
+/* 商品兑换确认  by wu*/
+.ao-dialog.pop.goods-confirm {
+  width: 70%; }
+  .ao-dialog.pop.goods-confirm h3 {
+    margin-bottom: 1.408rem; }
+  .ao-dialog.pop.goods-confirm p {
+    text-align: left;
+    font-size: 0.64rem;
+    margin-bottom: 0.512rem; }
+    .ao-dialog.pop.goods-confirm p.g-tips {
+      font-size: 0.512rem;
+      margin-bottom: 1.23733rem; }
+    .ao-dialog.pop.goods-confirm p span {
+      color: #f67e2d; }
+  .ao-dialog.pop.goods-confirm .btnbox a {
+    background: #30b370;
+    color: #fff; }
+
+/*app*/
+.open-app-box {
+  display: none;
+  width: 100%;
+  height: 2.56rem;
+  background: rgba(0, 0, 0, 0.65);
+  position: absolute;
+  bottom: -2.56rem;
+  left: 0;
+  z-index: 1000;
+  -webkit-transition: bottom .3s ease-in-out;
+  -moz-transition: bottom .3s ease-in-out;
+  -o-transition: bottom .3s ease-in-out;
+  transition: bottom .3s ease-in-out; }
+  .open-app-box.show {
+    display: block;
+    bottom: 0; }
+  .open-app-box .close {
+    float: left;
+    width: 1.6rem;
+    height: 2.56rem;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAS1BMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMwrhPl3AAAAGHRSTlMAFtfQBiT2C+qZM5zJi7lYwLY/dnQ6w/MFlwY3AAAA+klEQVQ4y4VT2ZKEIAwMV7gUZa7t///SdVZlMyNV9IvB7iIhSdM//BKnwBymuHi6wkVGA0f3RduZgfXxVNaq52MFeLaSdwbITpwzYMQ5BehEH0gaITV9QLmU5QuCO/IbFEsX2AKz/56hPXXgNea/BIxEXSTwO0lEPi+lryC/Kc84aila7YEy5ageP5YWvFqtu0JtwXHHCzeKuG/RSajzs+OOSNMmkgrJ0w0TBSiSCsmTQiCGJamQPFnwUDBMMSxy+Mxuo9r0Viyi1bXTat6UeTCs4bjHC0PeoPZWrsL4trT1urQVwY3XXhonOunDZpyR9aTbpHmFD0f2/wVTIRIeM81GAAAAAABJRU5ErkJggg==) no-repeat center center;
+    background-size: 0.68267rem 0.68267rem; }
+  .open-app-box .logo {
+    float: left;
+    width: 1.408rem;
+    height: 1.408rem;
+    margin: 0.59733rem 0.42667rem 0;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAMAAADUivDaAAABMlBMVEUAAADYRlfYRlfcUlfYRlfodFrlbFniX1fYRlfYRlffWVffV1ThWlTYRlfjZVnqhFnmcFngWFTmdFjeU1XYRlfqe1riXVP////wnFzfVlTnjJbodVrurrbpl6H+/PzkgIzdXWzso6uIMlfpfFnbU2P10dXroarrnab77e/43uHzwsjkeobjd4Todlf99PX0x83wtbzniZTidIHgaHbeYnDaTFzYSFn99/j88fL66ev32dzurLTqmaLoj5rlhI/hb3zdXGvcWWjaUGD65+n54eT209fyvcPxucDvsbntqbLsp6/pkp3gbHrfZHPuj1r1ztPwt76POFfmbVXkaVXtmFzTfluZQljmcVbrg1nkY1T54+b21dnmklzkkFvjj1veiVvdiFvEcFrCbVqrVlmnUVihTFh5eFgzAAAAFHRSTlMA1pwF+vnZh05JDNn5uH3w6+uifSJ01QgAAALgSURBVFjD7NAhFoAwEAPRJKzoirrc/6y8BxVYGoPgH2DEYGmx/EJRjadBb+AAlkPepGMVprfNuyEHdH1wZACgIwTaoYYcEugQUQ4VHPsT306cbNPZjqJAGIbhm/iSLyFQpQmySQAREQUXXNoFjR7P/V/IUAM9DbRPSKpOeFP1B0pjitbI6Koe+G9qlB8TpqHXPJ7UYu0ByT4LeN515URPLfkm7SfW7HIO2GtdNgXgsG/WSxyYbacb6atnJldU9zGl3AGlG6LmEqDzHP2weeslTE5wcE4+LwXvuFICSF8UMUZcfScMW+uoxvNhYm7c3hHX13ex1SlRM93V2uwkXPbFw8SY39wmsYvjFGgTBxMo6iFeM1JE+j/JMGHOi8hgaEX+qElUZN4mWunu5pBCJJDeWgOGCZTOK+ZFBhGaBC5BIDHnCS0vIMXX1uVlQy6tDwmk1vhRoqYSybgR8thsAPJcJTdBLkNugEHiodVyOlprCskBYGom+ZLH2R9eaf9K6OybtJ/WV721x4XaAtGRzGzpkH4gdh9OYQu+mpcsdQpl/ybPB5tZAoXipe08iiX3M2bz4SweVsbJAsAi5FL3SyySrSco8gXSkMHN3wOxX5zJ0BJHwGKw/X2RaAElvQt1EUk1/idU9coaoAb5fsbNz1EJ5r2E9bedOldBGAgCMDwQkoARzxhWtJCkEBQLsbMRxAMEAzGaKN7X+7+Cs3GFWM5ukyJ/s9V8wzQ7bo/sX53VsWf3x8vh1BatV3PcPOsNcctk/l0/WnSz+2vlRE5kimj+58TePmySAidd7DNs4JBKEyECasSAMTUCBVUiZqrEYatM7HH09oqeZ3y9FilBHHDyFLiuG22RaJAShIfE3eXt6EQxIXwkHnKEDlZCMOzCDwnIhxhQ50LIeLsoeF8ZlSiBVhSEiEroGoCJxEaeMAGzVAgDeIWqPFEpwNewZAkDBZHpyxC6Cam0WtmnEbpR0iDpA3jCkZ1SZVsTAAAAAElFTkSuQmCC) no-repeat center center;
+    background-size: contain; }
+  .open-app-box .slogen {
+    float: left;
+    color: #fff;
+    font-size: 0.55467rem;
+    margin-top: 0.53333rem; }
+    .open-app-box .slogen p {
+      color: #ccc;
+      font-size: 0.512rem; }
+  .open-app-box .btn-open {
+    float: right;
+    width: 4.096rem;
+    height: 1.45067rem;
+    font-size: 0.64rem;
+    line-height: 1.45067rem;
+    text-align: center;
+    color: #fff;
+    margin: 0.55467rem 0.42667rem 0 0;
+    background: #e6465a;
+    border-radius: 0.17067rem; }

@@ -1,0 +1,131 @@
+@charset "UTF-8";
+/*
+  Global common style definitions.
+  desc : for wx aoyuanProject
+  author: By HP 2017-05-03
+  mail: 542262705@qq.com
+  reference: allex
+*/
+/* 750px 宽度 */
+/*color定义*/
+/*默认主题色 橙色*/
+/*定义绿色*/
+/*disable时背景色*/
+/*默认border颜色*/
+/*黑色字体*/
+/*默认字体灰色*/
+/* 计算宽度 */
+/*居中*/
+/*前缀*/
+html, body {
+  width: 100%;
+  min-height: 100%; }
+
+html {
+  height: 100%;
+  color: #000;
+  background: #FFF;
+  -webkit-tap-highlight-color: transparent;
+  tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased; }
+
+input, textarea, select, a, button {
+  outline: 0; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style-type: none; }
+
+p, ul, li, h2, h3, input, dl, dt, dd {
+  margin: 0;
+  padding: 0; }
+
+a {
+  text-decoration: none;
+  color: #333; }
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearfix {
+  zoom: 1; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+.txt-overflow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.txt-def {
+  color: #f27052; }
+
+.txt-green {
+  color: #30b370; }
+
+.txt-grey {
+  color: #b2b2b2; }
+
+.txt-small {
+  font-size: 0.512rem; }
+
+.bg-grey {
+  background: f8f8f8; }
+
+.bg-white {
+  background: #fff; }
+
+.bg-no {
+  background: transparent; }
+
+.mt20 {
+  margin-top: 0.42667rem; }
+
+.mb20 {
+  margin-bottom: 0.42667rem; }
+
+.mr20 {
+  margin-right: 0.42667rem; }
+
+.ml20 {
+  margin-left: 0.42667rem; }
+
+.pt20 {
+  padding-top: 0.42667rem; }
+
+.pb20 {
+  padding-bottom: 0.42667rem; }
+
+.pr20 {
+  padding-right: 0.42667rem; }
+
+.pl20 {
+  padding-left: 0.42667rem; }
+
+.p-r {
+  position: relative; }
+
+.p-a {
+  position: absolute; }
+
+.p-f {
+  position: fixed; }
+
+.p-s {
+  position: static; }
+
+.hide {
+  display: none; }
+
+/* tap-hightlight-color */

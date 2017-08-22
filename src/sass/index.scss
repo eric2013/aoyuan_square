@@ -1,0 +1,746 @@
+/*
+  desc : 微信奥园项目特殊非公共css
+  author : HP 2017-05-03
+  version : 1.0.0
+ */
+
+@import "common/wraper";
+
+
+$fontSize: 46.875; /* 750px 宽度 */
+
+/*color定义*/
+$clr-def: #f27052; /*默认主题色 橙色*/
+$clr-def-act: #ef5734;
+$clr-green: #30b370; /*定义绿色*/
+$clr-green-act: #1bb265;
+$clr-err: #e4393c; /*提醒红色*/
+$clr-disable: #eaeaea; /*disable时背景色*/
+$clr-border: #bbb; /*默认border颜色*/
+$clr-black: #333; /*黑色字体*/
+$clr-black6: #666; /*黑色字体*/
+$clr-grey: #b2b2b2; /*默认字体灰色*/
+$clr-orange: #f67e2d; /*兑换确认中产品名称的颜色*/
+
+/* 计算宽度 */
+@function rem($n) {
+    @return ($n / $fontSize) * 1rem;
+}
+
+/*居中*/
+@mixin center-block {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/*前缀*/ 
+@mixin prefix($property,$value){
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
+
+/* login 会员登录 / 注册 / 忘记密码 */
+.login-tab{
+	padding-top: rem(60);
+	padding-bottom: rem(75);
+	ul{
+		width:70%;
+		@include center-block;
+		border:solid rem(1) $clr-def;
+		border-radius:rem(6);
+		box-sizing:border-box;
+		overflow:hidden;
+		li{
+			float:left;
+			width:50%;
+			height:rem(78);
+			line-height: rem(78);
+			text-align: center;
+			font-size: rem(30);
+			&.on{
+				color:#fff;
+				background:$clr-def;
+			}
+		}
+	}
+}
+
+.login-title{
+	font-size: rem(36);
+	text-align: center;
+	padding:rem(50) 0;
+}
+
+.login-form{
+	display:none;
+	&.show{
+		display:block;
+	}
+	.cont{
+		input{
+			width:100%;
+			height:rem(102);
+			border:0;
+		}
+	}
+
+	li{
+		&.yzm{
+			margin-right:rem(240);
+			.abs{
+				right:rem(-240);
+				top:0;
+				.btn{
+					width:rem(230);
+					height:rem(86);
+					line-height:rem(86);
+					margin-top:rem(17);
+				}
+			}
+		}
+		&.pwd{
+			.cont .ao-icon-clear{
+				right:rem(120);
+			}
+			.abs{
+				width:rem(80);
+				text-align:center;
+				right:rem(20);
+				top:rem(0);
+				z-index: 10;
+			}
+		}
+	}
+}
+
+.login-btn{
+	margin:rem(100) rem(20) rem(25);
+	font-size: rem(34);
+}
+
+.login-sub{
+	margin:0 rem(20);
+	font-size: rem(32);
+	a.hide{
+		display:none;
+	}
+}
+
+.login-privilege{
+	width:100%;
+	position:absolute;
+	bottom:rem(63);
+	text-align: center;
+	a{
+		color:$clr-def;
+		font-size:rem(28);
+		line-height: rem(48);
+		text-decoration: underline;
+	}
+}
+
+.login-fullbox{
+	width:100%;
+	height:100%;
+	.mm-ok{
+		padding-top:rem(250);
+		.inner{
+			text-align: center;
+			padding-top:rem(150);
+			background:url(../images/ao-icon-ok-big.png) no-repeat center top;
+			background-size: rem(120) rem(120);
+			.txt-def{
+				font-size: rem(36);
+				margin-bottom:rem(10);
+			}
+		}
+	}
+}
+
+.ao-dialog.prompt.pic-coder{
+	.msg {
+		.title{
+			color:$clr-def;
+			margin-bottom:rem(50);
+		}
+		.coder{
+			width:100%;
+			height:rem(150);
+			input{
+				float:left;
+				width:rem(278);
+				height:rem(88);
+				color:$clr-def;
+				font-size: rem(32);
+				text-indent: rem(30);
+				border-radius: rem(44);
+				border:solid rem(1) $clr-def;
+			}
+			img{
+				float:right;
+				width:rem(200);
+				height:rem(88);					
+			}
+		}
+	}
+	.btnbox a.btn-ok{
+		width:50%;
+		color:#fff;
+		background:$clr-def;
+		margin-left:25%;
+	}
+}
+
+/*我的会员卡*/
+.my-card{
+	width:100%;
+	height:rem(308);
+	padding-top:rem(50);
+	img{
+		width:100%;
+	}
+}
+/*我的积分*/
+.my-point{
+	text-align: center;
+	padding:rem(60) 0 rem(48);
+	margin-bottom: rem(20);
+	background:#fff;
+	border-bottom:solid rem(1) $clr-border;
+	position: relative;
+	.point{
+		color:$clr-def;
+		font-size: rem(72)
+	}
+	.question{
+		position: absolute;
+		right:rem(30);
+		top:rem(20);
+	}
+}
+/*积分明细*/
+.point-period{
+	width:100%;
+	padding:rem(60) 0;
+	&>div{
+		width:40%;
+		text-align:center;
+		line-height: rem(72);
+		color:$clr-def;
+		@include center-block;
+		border:solid rem(1) $clr-border;
+		border-radius: rem(6);
+		position:relative;
+		input{
+			width:100%;
+			height:rem(72);
+			border:0;
+			opacity:0;
+			position: absolute;
+			left:0;
+			top:0;
+			z-index: 20;
+			background: transparent;
+		}
+		.ao-icon{
+			background-size:rem(32) rem(32);
+			position: absolute;
+			right:rem(20);
+			top:rem(16);
+		}
+	}
+}
+.point-tabs{
+	border-bottom:solid rem(1) $clr-border;
+	.tabs.tabs-box{
+		height:rem(140);
+		li{
+			height:rem(140);
+			line-height: initial;
+			padding:rem(15) 0;
+			box-sizing:border-box;
+			.bdr {
+				height:100%;
+				border-right:solid rem(1) $clr-border;
+			}
+			.point{
+				display: block;
+				font-size: rem(48);
+				line-height: rem(60);
+				margin:0;
+			}
+			span{
+				font-size: rem(24);
+			}
+		}
+	}
+}
+.point-box{
+	.my-points{
+		display:none;
+		&.show{
+			display:block;
+		}
+
+		li{
+			height:rem(120);
+			line-height: rem(120);
+			a{
+				position: relative;
+				background:none;
+				.point-name{
+					width:70%;
+					overflow: hidden;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+				}
+				.point-date{
+					color:$clr-grey;
+					font-size: rem(24);
+					line-height: rem(24);
+					position: absolute;
+					left:0;
+					top:rem(80);
+				}
+				.txt-def, .txt-green{
+					float:right;
+					font-size: rem(36);
+				}
+			}
+		}
+	}
+}
+/*积分商城*/
+.mall-box{
+	overflow:hidden;
+}
+.mall-sort-tit{
+	line-height: rem(36);
+	font-size: rem(32);
+	padding-left:rem(20);
+	margin:rem(44) rem(20) rem(26);
+	border-left:solid rem(6) $clr-def;
+}
+.mall-goods-list{
+	margin-left:rem(20);
+	ul{
+		overflow:hidden;
+		li{
+			float:left;
+			width:rem(345);
+			height:rem(480);
+			margin-right:rem(20);
+			margin-bottom:rem(20);
+			background:#fff;
+			a{
+				display:block;
+				height:rem(480);
+				img{
+					width:rem(345);
+					height:rem(345);
+				}
+				p{
+					padding-left:rem(20);
+					padding-right:rem(20);
+					&.g-info{
+						line-height: rem(60);
+						color:$clr-def;
+						.point{
+							font-size:rem(40);
+						}
+						.num{
+							float:right;
+							color:$clr-grey;
+						}
+					}
+					&.g-name{
+						overflow: hidden;
+					    text-overflow: ellipsis;
+					    white-space: nowrap;
+					}
+				}
+			}
+		}
+	}
+}
+/*积分商城商品详情*/
+.mall-goods-intro{
+	padding:rem(30);
+	margin-bottom: rem(20);
+	background:#fff;
+	overflow:hidden;
+	.goods-img{
+		float:left;
+		width:rem(200);
+		height:rem(200);
+		img{
+			width:rem(200);
+			height:rem(200);
+		}
+	}
+	.goods-info{
+		margin-left:rem(230);
+		.g-name{
+			font-size: rem(36);
+			line-height: rem(50);
+			overflow: hidden;
+		    text-overflow: ellipsis;
+		    white-space: nowrap;
+		}
+		.g-date{
+			font-size: rem(24);
+			color:#6c83b1;
+		}
+		.g-info{
+			margin-top: rem(70);
+			color:$clr-def;
+			.point{
+				font-size:rem(40);
+			}
+			.num{
+				margin-left:rem(40);
+				color:$clr-grey;
+			}
+		}
+	}
+}
+.mall-goods-rule{
+	padding:rem(30);
+	margin-bottom: rem(20);
+	background:#fff;
+	overflow:hidden;
+	.title{
+		font-weight:600;
+		margin-bottom:rem(20);
+	}
+	li{
+		color:$clr-black6;
+		font-size: rem(28);
+		margin-bottom:rem(20);
+		span{
+			float:left;
+			display:block;
+			width:rem(20);
+		}
+		p{
+			margin-left:rem(30);
+		}
+	}
+}
+.mall-goods-btn{
+	width:100%;
+	font-size: rem(32);
+	padding:rem(30);
+	box-sizing:border-box;
+	position:absolute;
+	bottom:0;
+}
+
+/*我的卡券*/
+.coupons-box{
+	margin:0 rem(20);
+	.my-coupons{
+		display:none;
+		&.show{
+			display:block;
+		}
+		li{
+			padding-top:rem(20);
+			a{
+				display:block;
+				width:100%;
+				height:rem(230);
+				&.coupons-obj{
+					background:url(../images/aoyuan-kaquan-def.png) no-repeat;
+					background-size: 100% 100%;
+				}
+				&.coupons-obj-used{
+					background:url(../images/aoyuan-kaquan-def-used.png) no-repeat;
+					background-size: 100% 100%;
+				}
+				&.coupons-obj-over{
+					background:url(../images/aoyuan-kaquan-def-expire.png) no-repeat;
+					background-size: 100% 100%;
+				}
+				&.coupons-ticket{
+					background:url(../images/aoyuan-kaquan-green.png) no-repeat;
+					background-size: 100% 100%;
+				}
+				&.coupons-ticket-used{
+					background:url(../images/aoyuan-kaquan-green-used.png) no-repeat;
+					background-size: 100% 100%;
+				}
+				&.coupons-ticket-over{
+					background:url(../images/aoyuan-kaquan-green-expire.png) no-repeat;
+					background-size: 100% 100%;
+				}
+				&.coupons-used{
+					background:url(../images/aoyuan-kaquan-used.png) no-repeat;
+					background-size: 100% 100%;
+				}
+				&.coupons-over{
+					background:url(../images/aoyuan-kaquan-expire.png) no-repeat;
+					background-size: 100% 100%;
+				}
+
+				.coupon-name{
+					line-height: rem(164);
+					padding-left:rem(30);
+					font-size:rem(40);
+					color:#fff;
+				    text-overflow: ellipsis;
+				    white-space: nowrap;
+					overflow: hidden;
+				}
+				.coupon-expire{
+					color:$clr-black6;
+					line-height: rem(60);
+					padding-left:rem(30);
+				}
+			}
+		}
+	}
+}
+
+.coupons-code{
+	width:100%;
+	height:rem(118);
+	line-height:rem(118);
+	font-size: rem(36);
+	font-weight: 600;
+	text-align: center;
+	background:#fff;
+}
+
+.coupons-rule{
+	margin-top:rem(20);
+	padding:rem(20) 0;
+	background: #fff;
+	dl{
+		padding:rem(15) rem(20);
+		dt{
+			padding-left:rem(20);
+			&:before{
+				display:inline-block;
+				width:rem(20);
+				height:100%;
+				content:"●";
+				font-size: rem(20);
+			}
+		}
+		dd{
+			padding-left:rem(40);
+			color:$clr-grey;
+		}
+	}
+}
+
+/*我的清单*/
+.shophead{
+	padding:rem(50) 0 rem(40);
+	.shop-logo{
+		width:rem(132);
+		height:rem(132);
+		@include center-block;
+		border-radius: 100%;
+		overflow:hidden;
+		img{
+			width:100%;
+			height:100%;
+		}
+	}
+	.shop-name{
+		text-align: center;
+		font-size: rem(36);
+		margin-top: rem(10);
+	}
+}
+
+.bill-box{
+	padding:0 rem(20);
+	border-bottom:solid rem(1) $clr-border;
+	&.expand{
+		.ao-icon{
+			@include prefix(transform,rotate(180deg));
+		}
+	}
+	.bill-head{
+		height:rem(120);
+		line-height:rem(120);
+		h5{
+			display:inline-block;
+			line-height:rem(120);
+			font-size: rem(30);
+			margin:0;
+		}
+		.bill-money{
+			float:right;
+			.num{
+				font-size: rem(38);
+			}
+			.ao-icon{
+				@include prefix(transition,(transform .15s))
+			}
+		}
+	}
+	.bill-body{
+		ul{
+			padding-bottom:rem(30);
+			border-top:solid rem(1) $clr-border;
+			border-bottom:solid rem(1) $clr-border;
+			li{
+				overflow:hidden;
+				width:100%;
+				line-height: rem(60);
+				&.head{
+					line-height: rem(100);
+					color:$clr-grey;
+				}
+				&>div{
+					float:left;
+					&.col-l{
+						width:rem(360);
+						overflow: hidden;
+					    text-overflow: ellipsis;
+					    white-space: nowrap;
+					}
+					&.col-m{
+						width:rem(190);
+						text-align: center;
+					}
+					&.col-r{
+						width:rem(160);
+						text-align: right;
+					}
+				}
+			}
+		}
+		.total{
+			line-height: rem(98);
+		}
+	}
+}
+
+.get-coupon-box{
+	padding:0 rem(30);
+	margin-top:rem(20);
+	.get-coupon{
+		width:rem(690);
+		height:rem(176);
+		background:url(../images/aoyuan-jifen-bg.png) no-repeat;
+		.part-l{
+			float: left;
+			width:rem(350);
+			text-align: center;
+			padding-top:rem(40);
+			color:$clr-grey;
+			p{
+				color:$clr-def;
+				line-height: rem(80);
+				span{
+					font-size: rem(60);
+					font-weight: 500;
+				}
+			}
+		}
+		.part-r{
+			float:left;
+			width:rem(220);
+			.btn{
+				margin:rem(39) rem(60) 0;
+			}
+		}
+	}
+}
+/*我的资料*/
+input[disabled="true"].sex{
+	color:$clr-black;
+}
+input[name="bz"]{
+	padding-right:rem(80);
+	box-sizing:border-box;
+}
+
+/* 商品兑换确认  by wu*/
+.ao-dialog.pop.goods-confirm {
+	width: 70%;
+	h3 {
+		margin-bottom: rem(66);
+	}
+	p {
+		text-align: left;
+		font-size: rem(30);
+		margin-bottom: rem(24);
+		&.g-tips {
+			font-size: rem(24);
+			margin-bottom: rem(58);
+		}
+		span {
+			color: $clr-orange;
+		}
+	}
+	.btnbox a {
+		background: $clr-green;
+		color: #fff;
+	}
+}
+
+/*app*/
+.open-app-box{
+	display:none;
+	width:100%;
+	height:rem(120);
+	background:rgba(0,0,0,.65);
+	position:absolute;
+	bottom:rem(-120);
+	left:0;
+	z-index: 1000;
+    -webkit-transition: bottom .3s ease-in-out;
+	   -moz-transition: bottom .3s ease-in-out;
+	     -o-transition: bottom .3s ease-in-out;
+	    	transition: bottom .3s ease-in-out;
+	&.show{
+		display: block;
+		bottom:0;
+	}
+	.close{
+		float:left;
+		width:rem(75);
+		height:rem(120);
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAAS1BMVEUAAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMwrhPl3AAAAGHRSTlMAFtfQBiT2C+qZM5zJi7lYwLY/dnQ6w/MFlwY3AAAA+klEQVQ4y4VT2ZKEIAwMV7gUZa7t///SdVZlMyNV9IvB7iIhSdM//BKnwBymuHi6wkVGA0f3RduZgfXxVNaq52MFeLaSdwbITpwzYMQ5BehEH0gaITV9QLmU5QuCO/IbFEsX2AKz/56hPXXgNea/BIxEXSTwO0lEPi+lryC/Kc84aila7YEy5ageP5YWvFqtu0JtwXHHCzeKuG/RSajzs+OOSNMmkgrJ0w0TBSiSCsmTQiCGJamQPFnwUDBMMSxy+Mxuo9r0Viyi1bXTat6UeTCs4bjHC0PeoPZWrsL4trT1urQVwY3XXhonOunDZpyR9aTbpHmFD0f2/wVTIRIeM81GAAAAAABJRU5ErkJggg==) no-repeat center center;
+		background-size:rem(32) rem(32); 
+	}
+	.logo{
+		float:left;
+		width:rem(66);
+		height:rem(66);
+		margin:rem(28) rem(20) 0;
+		background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEIAAABCCAMAAADUivDaAAABMlBMVEUAAADYRlfYRlfcUlfYRlfodFrlbFniX1fYRlfYRlffWVffV1ThWlTYRlfjZVnqhFnmcFngWFTmdFjeU1XYRlfqe1riXVP////wnFzfVlTnjJbodVrurrbpl6H+/PzkgIzdXWzso6uIMlfpfFnbU2P10dXroarrnab77e/43uHzwsjkeobjd4Todlf99PX0x83wtbzniZTidIHgaHbeYnDaTFzYSFn99/j88fL66ev32dzurLTqmaLoj5rlhI/hb3zdXGvcWWjaUGD65+n54eT209fyvcPxucDvsbntqbLsp6/pkp3gbHrfZHPuj1r1ztPwt76POFfmbVXkaVXtmFzTfluZQljmcVbrg1nkY1T54+b21dnmklzkkFvjj1veiVvdiFvEcFrCbVqrVlmnUVihTFh5eFgzAAAAFHRSTlMA1pwF+vnZh05JDNn5uH3w6+uifSJ01QgAAALgSURBVFjD7NAhFoAwEAPRJKzoirrc/6y8BxVYGoPgH2DEYGmx/EJRjadBb+AAlkPepGMVprfNuyEHdH1wZACgIwTaoYYcEugQUQ4VHPsT306cbNPZjqJAGIbhm/iSLyFQpQmySQAREQUXXNoFjR7P/V/IUAM9DbRPSKpOeFP1B0pjitbI6Koe+G9qlB8TpqHXPJ7UYu0ByT4LeN515URPLfkm7SfW7HIO2GtdNgXgsG/WSxyYbacb6atnJldU9zGl3AGlG6LmEqDzHP2weeslTE5wcE4+LwXvuFICSF8UMUZcfScMW+uoxvNhYm7c3hHX13ex1SlRM93V2uwkXPbFw8SY39wmsYvjFGgTBxMo6iFeM1JE+j/JMGHOi8hgaEX+qElUZN4mWunu5pBCJJDeWgOGCZTOK+ZFBhGaBC5BIDHnCS0vIMXX1uVlQy6tDwmk1vhRoqYSybgR8thsAPJcJTdBLkNugEHiodVyOlprCskBYGom+ZLH2R9eaf9K6OybtJ/WV721x4XaAtGRzGzpkH4gdh9OYQu+mpcsdQpl/ybPB5tZAoXipe08iiX3M2bz4SweVsbJAsAi5FL3SyySrSco8gXSkMHN3wOxX5zJ0BJHwGKw/X2RaAElvQt1EUk1/idU9coaoAb5fsbNz1EJ5r2E9bedOldBGAgCMDwQkoARzxhWtJCkEBQLsbMRxAMEAzGaKN7X+7+Cs3GFWM5ukyJ/s9V8wzQ7bo/sX53VsWf3x8vh1BatV3PcPOsNcctk/l0/WnSz+2vlRE5kimj+58TePmySAidd7DNs4JBKEyECasSAMTUCBVUiZqrEYatM7HH09oqeZ3y9FilBHHDyFLiuG22RaJAShIfE3eXt6EQxIXwkHnKEDlZCMOzCDwnIhxhQ50LIeLsoeF8ZlSiBVhSEiEroGoCJxEaeMAGzVAgDeIWqPFEpwNewZAkDBZHpyxC6Cam0WtmnEbpR0iDpA3jCkZ1SZVsTAAAAAElFTkSuQmCC) no-repeat center center;
+		background-size:contain;
+	}
+	.slogen{
+		float:left;
+		color:#fff;
+		font-size: rem(26);
+		margin-top:rem(25);
+		p{
+			color:#ccc;
+			font-size: rem(24);
+		}
+	}
+	.btn-open{
+		float:right;
+		width:rem(192);
+		height:rem(68);
+		font-size: rem(30);
+		line-height: rem(68);
+		text-align: center;
+		color:#fff;
+		margin:rem(26) rem(20) 0 0;
+		background:#e6465a;
+		border-radius: rem(8);
+	}
+}

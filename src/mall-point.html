@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>积分商城</title>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name='apple-touch-fullscreen' content='yes'>
+	<meta content="fullscreen=yes,preventMove=no" name="ML-Config">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no,email=no,address=no" />
+
+	<!-- HTTP 1.1 -->  
+    <meta http-equiv="pragma" content="no-cache">  
+    <!-- HTTP 1.0 -->  
+    <meta http-equiv="cache-control" content="no-cache">  
+    <!-- Prevent caching at the proxy server -->  
+    <meta http-equiv="expires" content="0">
+    <script type="text/javascript" src="js/common/flexible.js"></script>  
+	<link rel="stylesheet" href="css/index.css">
+</head>
+<body class="grey">
+
+<div class="wrap">
+	<div class="mall-box">
+		<div class="mall-sort-tit">商铺类</div>
+
+		<div class="mall-goods-list">
+			<ul>
+				<li>
+					<a href="./mall-goods-detail.html">
+						<img src="../images/pri/goods/goods01.jpg" alt="商品图片">
+						<p class="g-info">
+							<span class="point">500</span>积分
+							<span class="num">剩20份</span>
+						</p>
+						<p class="g-name">太平洋50元咖啡券</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="./mall-goods-detail.html">
+						<img src="../images/pri/goods/goods02.jpg" alt="商品图片">
+						<p class="g-info">
+							<span class="point">500</span>积分
+							<span class="num">剩20份</span>
+						</p>
+						<p class="g-name">诺心蛋糕全场30元券诺心蛋糕全场30元券</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="./mall-goods-detail.html">
+						<img src="../images/pri/goods/goods03.jpg" alt="商品图片">
+						<p class="g-info">
+							<span class="point">500</span>积分
+							<span class="num">剩20份</span>
+						</p>
+						<p class="g-name">e袋洗洗衣8折抵用券</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="./mall-goods-detail.html">
+						<img src="../images/pri/goods/goods04.jpg" alt="商品图片">
+						<p class="g-info">
+							<span class="point">500</span>积分
+							<span class="num">剩20份</span>
+						</p>
+						<p class="g-name">e袋洗满300减50元券</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="mall-sort-tit">电商类</div>
+
+		<div class="mall-goods-list">
+			<ul>
+				<li>
+					<a href="./mall-goods-detail.html">
+						<img src="../images/pri/goods/goods05.jpg" alt="商品图片">
+						<p class="g-info">
+							<span class="point">500</span>积分
+							<span class="num">剩20份</span>
+						</p>
+						<p class="g-name">爱奇艺10元季卡代金券</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="./mall-goods-detail.html">
+						<img src="../images/pri/goods/goods06.jpg" alt="商品图片">
+						<p class="g-info">
+							<span class="point">500</span>积分
+							<span class="num">剩20份</span>
+						</p>
+						<p class="g-name">卖座电影30元观影优惠券</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="./mall-goods-detail.html">
+						<img src="../images/pri/goods/goods07.jpg" alt="商品图片">
+						<p class="g-info">
+							<span class="point">500</span>积分
+							<span class="num">剩20份</span>
+						</p>
+						<p class="g-name">美食到家会VIP7天体验卡</p>
+					</a>
+				</li>
+
+				<li>
+					<a href="./mall-goods-detail.html">
+						<img src="../images/pri/goods/goods08.jpg" alt="商品图片">
+						<p class="g-info">
+							<span class="point">500</span>积分
+							<span class="num">剩20份</span>
+						</p>
+						<p class="g-name">简印10元全场优惠券</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+
+<script src="js/common/require.js" crossorigin="*"></script>
+<script src="js/app.js" crossorigin="*"></script>
+<script>require(['mallpoint']);</script>
+<script type="text/html" id="typeListTpl">
+<% 
+    var _data = data,
+        _typeId = data.typeId,
+        _typeName = data._typeName,
+        _goodsList = data.goodsList;
+%>
+    <div class="mall-sort-tit" data-typeId="<%=_typeId %>"><%=_typeName%></div>
+    <div class="mall-goods-list">
+		<ul>
+		    <%for(var i=0; i < _goodsList.length; i++) {
+		    	var _costPoint = _goodsList.costPoint,
+		    	    _imgUrl = _goodsList.imgUrl,
+		    	    _name = _goodsList.name,
+		    	    _number = "./mall-goods.html?number=" + _goodsList.number,
+		    	    _storeCount = _goodsList.storeCount;
+		    %>
+			<li>
+				<a href="<%=_number %>">
+					<img src="<%=_imgUrl %>" alt="商品图片">
+					<p class="g-info">
+						<span class="point"><%=_costPoint %></span>积分
+						<span class="num">剩<%=_storeCount %>份</span>
+					</p>
+					<p class="g-name"><%=_name %></p>
+				</a>
+			</li>
+			<% } %>
+		</ul>
+	</div>
+</script>
+</body>
+</html>
